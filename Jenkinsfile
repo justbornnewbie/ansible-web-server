@@ -6,7 +6,7 @@ pipeline{
         stage("install-httpd"){
             steps{
                 sh '''
-                ansible-playbook -i host http-ansible.yml
+                ansible-playbook -i host nginx-ansible.yml
                 '''
             }
         }
