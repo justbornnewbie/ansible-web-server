@@ -4,7 +4,7 @@
       apt:
         name: nginx
         state: latest
-    - name: Start and enable httpd
+    - name: Start and enable nginx
       service: 
         name: nginx
         state: started
