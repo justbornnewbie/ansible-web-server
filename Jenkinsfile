@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "worker1"
+        label "ansibleworker1"
     }
     stages{
         stage("install-httpd"){
