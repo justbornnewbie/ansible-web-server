@@ -1,0 +1,9 @@
+---
+- name: install yum on ubuntu
+  hosts: devserver
+
+  tasks:
+    - name: Install yum on ubuntu servers
+      apt:
+        name: yum
+        state: latest
