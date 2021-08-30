@@ -1,0 +1,13 @@
+---
+- name: Install and start nginx on devserver group
+  hosts: devserver
+  tasks:
+  - name: Install nginx on devserver group
+    apt:
+      name: nginx
+      state: latest
+  - name: Check nginx service status
+    service:
+      name: nginx
+      state: started
+      enabled: yes

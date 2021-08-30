@@ -3,7 +3,7 @@ pipeline{
         label "worker1"
     }
     stages{
-        stage("install-httpd"){
+        stage("install-nginx"){
             steps{
                 sh '''
                 ansible-playbook -i host nginx-ansible.yml

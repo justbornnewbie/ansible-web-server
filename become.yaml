@@ -1,0 +1,9 @@
+---
+- name: Check nginx apache service status
+  hosts: devserver
+
+  tasks:
+      - name: check nginx service status
+        become_user: rahul
+        shell: |
+          systemctl status nginx

@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
-    - name: Install the latest version of apache
+    - name: Install the latest version of nginx
       apt:
         name: nginx
         state: latest
