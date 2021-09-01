@@ -1,0 +1,8 @@
+---
+- name: Copy file from /root to /opt
+  hosts: devserver
+  tasks:
+    - name: Copy files
+      copy: 
+        src: /root/testfile
+        dest: /opt/
