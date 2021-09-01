@@ -1,0 +1,10 @@
+---
+- name: Install nginx on devservers
+  hosts: devserver
+
+  tasks:
+    - name: Install nginx on ubuntu servers
+      apt:
+        name: nginx
+        state: latest
+        
