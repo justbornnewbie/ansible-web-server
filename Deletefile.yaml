@@ -1,0 +1,8 @@
+---
+- name: delete file
+  hosts: devserver
+  tasks:
+    - name: remove file
+      file:
+        path: /opt/testfile
+        state: absent

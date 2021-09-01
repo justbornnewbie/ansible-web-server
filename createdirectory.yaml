@@ -1,0 +1,9 @@
+---
+- name: create a directory folder1
+  hosts: devserver
+  tasks:
+  - name: create a directory and set permission to 777
+    file: 
+      path: /opt/rahul
+      state: directory
+      mode: '0777'

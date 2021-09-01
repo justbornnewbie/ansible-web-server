@@ -1,0 +1,9 @@
+---
+- name: replace or change line in file  
+  hosts: devserver
+  tasks: 
+    - name: replace SELINUX with SELINUX=disabled in /etc/selinux/config
+      lineinfile: 
+        path: /etc/selinux/config
+        regexp: '^SELINUX='
+        line: SELINUX=enforcing
