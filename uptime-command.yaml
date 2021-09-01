@@ -1,0 +1,9 @@
+---
+ - name: Check the remote host uptime
+   hosts: devserver
+   tasks:
+      - name: Execute the Uptime command over Command module
+        command: uptime
+        register: uptimevariable #this name can be anything
+
+      - debug: var=uptimevariable.stdout_lines
