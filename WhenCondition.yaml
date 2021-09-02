@@ -1,0 +1,9 @@
+---
+- name: use when condition
+  hosts: devserver
+  tasks:
+    - name: Install httpd on centos
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family == "CentOS" and ansible_distribution_version == "8.4.2105"
