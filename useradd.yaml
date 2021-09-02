@@ -1,0 +1,14 @@
+---
+- name: Create user rahul on devservers
+  hosts: devserver
+  tasks: 
+    - name: Create a login user with name rahul
+      user:
+          name: rahul
+          password: secret
+          groups:
+          state: present
+          shell: /bin/bash
+          system: no
+          createhome: yes
+          home: /home/rahul
