@@ -1,0 +1,9 @@
+---
+- name: add line to the file
+  hosts: devserver
+  tasks:
+    - name: Add a line to a file
+      lineinfile:
+        path: /etc/resolv.conf
+        line: nameserver 8.8.8.8
+        create: yes

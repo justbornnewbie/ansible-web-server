@@ -1,0 +1,9 @@
+---
+- name: enable port and service with ansible firewalld
+  hosts: devserver
+  tasks:
+    - firewalld:
+        port: 80/tcp
+        permanent: yes
+        source: 172.17.171.0/24
+        state: enabled

@@ -1,0 +1,12 @@
+---
+- name: run scheduled task
+  hosts: devserver
+  tasks:
+    - name: create a scheduled task
+      cron:
+        name: run script to find IP
+        job: /root/5.1.2.sh
+        month: 4
+        day: 5
+        hour: 17
+        minute: 00

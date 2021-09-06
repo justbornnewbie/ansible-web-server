@@ -1,0 +1,13 @@
+---
+- name: start at task example
+  hosts: devserver
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        state: installed
+    - name: install htop
+      apt:
+        name: htop
+        state: started
+        

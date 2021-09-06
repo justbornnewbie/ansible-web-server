@@ -1,0 +1,9 @@
+---
+- name: check nginx service status, if not started then start it
+  hosts: devserver
+
+  tasks:
+    - name: start nginx service
+      service:
+        name: nginx
+        state: started

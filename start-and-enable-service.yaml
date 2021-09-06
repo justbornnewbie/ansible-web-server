@@ -1,0 +1,9 @@
+---
+- name: start and enable nginx service
+  hosts: devserver
+  tasks:
+    - service:
+        name: nginx
+        state: started
+        enabled: yes
+      

@@ -1,0 +1,7 @@
+---
+- name: install htop by using packge module
+  hosts: devserver
+  tasks:
+  - package:
+      name: htop
+      state: installed

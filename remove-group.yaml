@@ -1,0 +1,8 @@
+---
+- name: create group syscare
+  hosts: devserver
+  tasks:
+    - name: create group syscare
+      group:
+        name: syscare
+        state: absent

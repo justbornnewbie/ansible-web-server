@@ -3,7 +3,8 @@
   hosts: devserver
   tasks: 
     - name: Change testfile permission to 777 and user to rahul
-      file: /opt/testfile
+      file: 
+        path: /opt/testfile
         owner: rahul
         group: rahul
-        mode: "0644"
+        mode: "0777"

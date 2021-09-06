@@ -1,0 +1,9 @@
+---
+- name: delete a directory
+  hosts: devserver
+  tasks:
+    - name: Delete directory /opt/rahul
+      file:
+        path: /opt/rahul
+        state: absent
+        

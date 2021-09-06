@@ -1,0 +1,9 @@
+---
+- name: remove user rahul on devservers
+  hosts: devserver
+  tasks:
+    - name: Remove user with name rahul
+      user:
+          name: rahul
+          state: absent
+          remove: yes

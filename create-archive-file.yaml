@@ -1,0 +1,9 @@
+---
+- name: archive file /root/ansible/ into /opt/ansible.tgz
+  hosts: devserver
+  tasks:
+    - name: arcive files
+      archive:
+        path: /opt/rahul
+        dest: /opt/rahul.tgz
+        remove: yes
